@@ -1,7 +1,9 @@
 @extends('template')
 
-@section('title'){{$title}}
-    
+@section('title')
+    @if (isset($title))
+    -{{$title}} 
+    @endif
 @endsection
 
 @section('content')
@@ -21,14 +23,17 @@
                         
             <tbody>
                 @foreach ($doctorsList as $doctor)
-                    <tr>
-                        <th scope="row">{{ $doctor['id'] }}</th>
-                        <td>{{ $doctor['firstname'] }}{{ $doctor['lastname'] }}</td>
-                        <td>{{ $doctor['email'] }}</td>
-                        <td>{{ $doctor['phone'] }}</td>
-                        <td>{{ $doctor['address'] }}</td>
-                        <td>{{ $doctor['status'] }}</td>
-                    </tr>
+
+                    @if ($doctor['status']=='dostępny')
+                        <tr>
+                            <th scope="row">{{ $doctor['id'] }}</th>
+                            <td>{{ $doctor['firstname'] }} {{ $doctor['lastname'] }}</td>
+                            <td>{{ $doctor['email'] }}</td>
+                            <td>{{ $doctor['phone'] }}</td>
+                            <td>{{ $doctor['address'] }}</td>
+                            <td>{{ $doctor['status'] }}</td>
+                        </tr>
+                    @endif    
                 @endforeach
             </tbody>
     </table>

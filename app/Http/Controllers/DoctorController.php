@@ -15,6 +15,6 @@ class DoctorController extends Controller
         );
         return view('doctors.list',["doctorsList"=>$doctorsList,
                                     "footerYear"=>date("Y"),
-                                    "title"=>"- Moduł lekarzy"]);
+                                    "title"=>" Moduł lekarzy"]);
     }
 }
