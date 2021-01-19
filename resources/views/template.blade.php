@@ -18,10 +18,10 @@
                   <a class="nav-link" href="doctors/">Lekarze</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"></a>
+                  <a class="nav-link" href="#">Wizyty</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"></a>
+                  <a class="nav-link" href="#">Specjaliści</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link disabled" href="#"></a>

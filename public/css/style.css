@@ -1,5 +1,8 @@
 *{
-    /* min-height: 200vh; */
+  box-sizing: border-box;
+}
+.container{
+    min-height: 200%;
 }
 footer{
     background-color: #aaa;
