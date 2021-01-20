@@ -24,16 +24,16 @@
             <tbody>
                 @foreach ($doctorsList as $doctor)
 
-                    @if ($doctor['status']=='dostępny')
+                   
                         <tr>
-                            <th scope="row">{{ $doctor['id'] }}</th>
-                            <td>{{ $doctor['firstname'] }} {{ $doctor['lastname'] }}</td>
-                            <td>{{ $doctor['email'] }}</td>
-                            <td>{{ $doctor['phone'] }}</td>
-                            <td>{{ $doctor['address'] }}</td>
-                            <td>{{ $doctor['status'] }}</td>
+                            <th scope="row">{{ $doctor->id }}</th>
+                            <td>{{ $doctor->firstname }} {{ $doctor->lastname }}</td>
+                            <td>{{ $doctor->email }}</td>
+                            <td>{{ $doctor->phone }}</td>
+                            <td>{{ $doctor->address }}</td>
+                            <td>{{ $doctor->status }}</td>
                         </tr>
-                    @endif    
+                      
                 @endforeach
             </tbody>
     </table>
