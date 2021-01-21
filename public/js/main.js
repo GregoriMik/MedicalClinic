@@ -1,5 +1,5 @@
 
-alert("To działa!");
+// alert("To działa!");
 
 // let belt = document.createElement('div');
 // let beltPosition;

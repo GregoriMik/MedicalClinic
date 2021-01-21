@@ -27,7 +27,7 @@
                    
                         <tr>
                             <th scope="row">{{ $doctor->id }}</th>
-                            <td>{{ $doctor->firstname }} {{ $doctor->lastname }}</td>
+                            <td><a href="{{ URL::to('doctors/' . $doctor->id ) }}">{{ $doctor->name }}</a></td>
                             <td>{{ $doctor->email }}</td>
                             <td>{{ $doctor->phone }}</td>
                             <td>{{ $doctor->address }}</td>

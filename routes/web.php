@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('doctors/create', 'DoctorController@create');
+
 Route::get('doctors/', 'DoctorController@index');
+
+Route::get('doctors/{id}', 'DoctorController@show');
