@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('doctors/edit/{id}', 'DoctorController@edit');
+
 Route::get('doctors/create', 'DoctorController@create');
 
 Route::get('doctors/', 'DoctorController@index');

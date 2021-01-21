@@ -43,4 +43,13 @@ class DoctorController extends Controller
 
         return redirect ('doctors');
     }
+    public function edit($id){
+        $doctor=User::find($id);
+
+        $doctor->name = "Johnson Allan";
+
+        $doctor->save();
+
+        return redirect('doctors');
+    }
 }
