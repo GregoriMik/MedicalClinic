@@ -15,7 +15,7 @@
         
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="doctors/">Lekarze</a>
+                  <a class="nav-link" href="{{ URL::to('doctors/') }}">Lekarze</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Wizyty</a>
