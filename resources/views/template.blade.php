@@ -8,11 +8,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="{{  URL::asset('css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>System obsługi @yield('title')</title>
   </head>
   <body>
     <div class="container">
-        
+        <div>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
                   <a class="nav-link" href="{{ URL::to('doctors/') }}">Lekarze</a>
@@ -27,8 +28,11 @@
                   <a class="nav-link disabled" href="#"></a>
                 </li>
               </ul>
-
-
+              <form class="example" action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+              
 
 @yield('content')
 
@@ -37,9 +41,48 @@
     <footer class="text-center">
         {{ $footerYear }}
     </footer>
-
+    <style>
+      body {
+        font-family: Arial;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+      }
+      
+      form.example button {
+        float: left;
+        width: 20%;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+      }
+      
+      form.example button:hover {
+        background: #0b7dda;
+      }
+      
+      form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      </style>
     <!-- Optional JavaScript; choose one of the two! -->
-<script src="{{ URL::asset('js/main.js ') }}"
+<script src="{{ URL::asset('js/main.js ') }}"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
