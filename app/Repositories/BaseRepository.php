@@ -9,7 +9,7 @@ abstract class BaseRepository{
 
     protected $model;
 
-    public function getAll($columns=array('*')){
+    public function getAll($columns = array('*')){
         return $this->model->get($columns);
     }
 
@@ -29,5 +29,3 @@ abstract class BaseRepository{
     }
 
 }
-
-?>

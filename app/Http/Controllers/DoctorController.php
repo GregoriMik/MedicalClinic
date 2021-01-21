@@ -5,29 +5,31 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+
+use App\Repositories\UserRepository;
 class DoctorController extends Controller
 {
-    public function index(){
+    public function index(UserRepository $userRepo){
 
-        $users=User::all();
+        $users= $userRepo -> getAllDoctors();
 
 
         return view('doctors.list',["doctorsList"=>$users,
                                     "footerYear"=>date("Y"),
                                     "title"=>" Moduł lekarzy"]);
     }
-    public function show($id){
+    public function show(UserRepository $userRepo, $id){
 
-        $doctor=User::find($id);
+        $doctor= $userRepo -> find($id);
 
         return view('doctors.show',["doctor"=>$doctor,
                                     "footerYear"=>date("Y"),
                                     "title"=>" Moduł lekarzy"]);
     }
-    public function create(){
+    public function create(UserRepository $userRepo){
 
 
-        User::create([
+        $userRepo->create([
             
                 'name'=>'Allan Johnson',
                 'email'=>'allan@johnson.com',
@@ -43,12 +45,9 @@ class DoctorController extends Controller
 
         return redirect ('doctors');
     }
-    public function edit($id){
-        $doctor=User::find($id);
-
-        $doctor->name = "Johnson Allan";
-
-        $doctor->save();
+    public function edit(UserRepository $userRepo, $id){
+        
+        $doctor= $userRepo -> update(["name" => "Johnson Allan"], $id);
 
         return redirect('doctors');
     }
