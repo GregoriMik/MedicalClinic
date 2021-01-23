@@ -17,7 +17,7 @@
                     <th scope="col">Imię i Nazwisko</th>
                     <th scope="col">E-mail</th>
                     <th scope="col">Telefon</th>
-                    <th scope="col">Adres</th>
+                    <th scope="col">Adres przychodni</th>
                     <th scope="col">Status</th>
                 </tr>
             </thead>
