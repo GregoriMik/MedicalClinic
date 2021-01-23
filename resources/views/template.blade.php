@@ -19,19 +19,16 @@
                   <a class="nav-link" href="{{ URL::to('doctors/') }}">Lekarze</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Wizyty</a>
+                  <a class="nav-link" href="{{ URL::to('visits/') }}">Wizyty</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Specjaliści</a>
+                  <a class="nav-link" href="{{ URL::to('specializations/') }}">Specializacje</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#"></a>
+                  <a class="nav-link" href="#"></a>
                 </li>
               </ul>
-              <form class="example" action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-              </form>
+              
               
 
 @yield('content')

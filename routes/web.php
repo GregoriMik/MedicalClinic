@@ -22,3 +22,7 @@ Route::get('doctors/create', 'DoctorController@create');
 Route::get('doctors/', 'DoctorController@index');
 
 Route::get('doctors/{id}', 'DoctorController@show');
+
+Route::get('specializations/', 'SpecializationController@index');
+
+Route::get('visits/', 'VisitController@index');

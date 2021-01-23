@@ -10,6 +10,7 @@
     
 
     <table class="table">
+        <h3><b>Lekarze</b></h3></br></br>
             <thead>
                 <tr>
                     <th scope="col">#</th>
