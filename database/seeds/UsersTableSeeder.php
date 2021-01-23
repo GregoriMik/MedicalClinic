@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder
             'address'=>"ul.Wyspiańskiego 19, 32-700 Bochnia",
             'status'=>'Active',
             'pesel'=>'73010222333',
-            'type'=>'doktor'
+            'type'=>'doctor'
         ]);
 //doctor 2
         DB::table('users')->insert([
@@ -41,7 +41,7 @@ class UsersTableSeeder extends Seeder
             'address'=>"ul.Wyspiańskiego 19, 32-700 Bochnia",
             'status'=>'Active',
             'pesel'=>'73010222333',
-            'type'=>'doktor'
+            'type'=>'doctor'
         ]);
 //patient 1
         DB::table('users')->insert([

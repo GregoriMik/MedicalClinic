@@ -15,6 +15,6 @@ class Visit extends Model
     public function patient(){
         return $this->belongsTo(User::class,'patient_id');
     }
-
+    
 
 }

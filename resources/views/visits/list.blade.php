@@ -33,8 +33,8 @@
                    
                         <tr>
                             <th scope="row">{{ $visit->id }}</th>
-                            <td>{{ $visit->patient_id }}</a></td>
-                            <td>{{ $visit->doctor_id }}</a></td>
+                            <td>{{ $visit->patient->name }} ({{ $visit->patient->pesel }})</a></td>
+                            <td>{{ $visit->doctor->name }}</a></td>
                             <td>{{ $visit->date }}</a></td>
 
                         </tr>
