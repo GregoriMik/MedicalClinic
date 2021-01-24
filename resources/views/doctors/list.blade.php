@@ -17,6 +17,7 @@
                     <th scope="col">Imię i Nazwisko</th>
                     <th scope="col">E-mail</th>
                     <th scope="col">Telefon</th>
+                    <th scope="col">Specializacje</th>
                     <th scope="col">Adres przychodni</th>
                     <th scope="col">Status</th>
                 </tr>
@@ -31,6 +32,13 @@
                             <td><a href="{{ URL::to('doctors/' . $doctor->id ) }}">{{ $doctor->name }}</a></td>
                             <td>{{ $doctor->email }}</td>
                             <td>{{ $doctor->phone }}</td>
+                            <td>
+                                @foreach ($doctor->specializations as $specialization)
+                                <ul>   
+                                    <li>{{ $specialization->name}}</li>
+                                </ul>
+                                @endforeach    
+                            </td>
                             <td>{{ $doctor->address }}</td>
                             <td>{{ $doctor->status }}</td>
                         </tr>
