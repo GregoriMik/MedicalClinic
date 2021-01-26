@@ -44,7 +44,16 @@
                     <td>Status:</td>
                     <td>{{ $doctor->status }}</td>
                 </tr>
-
+                <tr>
+                    <td>Specjalizacje:</td>
+                    <td>
+                      <ul>
+                        @foreach ($doctor->specializations as $specialization)
+                                <li>{{ $specialization->name }}</li>
+                        @endforeach
+                      </ul>
+                    </td>
+                </tr>
             </table>
         </div>
     </div>
