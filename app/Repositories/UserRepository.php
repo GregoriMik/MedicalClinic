@@ -18,6 +18,10 @@ class UserRepository extends BaseRepository{
         return $this->model->where('type','doctor')->orderBy('name','asc')->get();
     }
 
+    public function getAllPatients(){
+        return $this->model->where('type','patient')->orderBy('name','asc')->get();
+    }
+
     public function getDoctorsStatistics(){
         return DB::table('users')->select(DB::raw('count(*) as user_count, status'))->where('type','doctor')->groupBy('status')->get();
     }
@@ -27,7 +31,7 @@ class UserRepository extends BaseRepository{
         return $this->model->where('type','doctor')->whereHas('specializations',
             function($q) use ($id){
                 $q->where('specializations.id',$id);
-                
+
             })->orderBy ('name','asc')->get();
     }
 }
