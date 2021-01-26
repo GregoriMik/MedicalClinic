@@ -11,6 +11,12 @@
     <div class="card">
         <div class="card-header">
             <ul>{{ $doctor->name }}</ul>
+            {{-- <img src="{{ $doctor->images }}" alt="Italian Trulli"> --}}
+            {{-- <img src="{{  URL::asset('images/1.jpg')}}"> alt="#"> --}}
+            {{-- <a href="{{ URL::to('doctors/' . $doctor->id ) }}"> TO POPRAWNIE DZIAŁA --}}
+            <div id="images">
+                <img src="{{URL::asset('images/'. $doctor->images) }}">
+            </div>
         </div>
         <div class="card-body">
             <table class="table">
