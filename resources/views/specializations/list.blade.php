@@ -31,7 +31,7 @@
                    
                         <tr>
                             <th scope="row">{{ $specialization->id }}</th>
-                            <td>{{ $specialization->name }}</a></td>
+                            <td><a href="{{ URL::to('doctors/specializations/' . $specialization->id) }}">{{ $specialization->name }}</a></td>
 
                         </tr>
                       

@@ -22,5 +22,13 @@ class UserRepository extends BaseRepository{
         return DB::table('users')->select(DB::raw('count(*) as user_count, status'))->where('type','doctor')->groupBy('status')->get();
     }
     
+    public function getDoctorsBySpecialization($id){
+        
+        return $this->model->where('type','doctor')->whereHas('specializations',
+            function($q) use ($id){
+                $q->where('specializations.id',$id);
+                
+            })->orderBy ('name','asc')->get();
+    }
 }
 

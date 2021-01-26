@@ -21,6 +21,29 @@ class DoctorController extends Controller
                                     "title"=>" Moduł lekarzy",
                                     "statistics"=>$statistics]);
     }
+
+
+    public function listBySpecialization(UserRepository $userRepo,$id){
+
+        $statistics = $userRepo ->getDoctorsStatistics();
+        
+        $users= $userRepo -> getDoctorsBySpecialization($id);
+
+
+        return view('doctors.list',["doctorsList"=>$users,
+                                    "footerYear"=>date("Y"),
+                                    "title"=>" Moduł lekarzy",
+                                    "statistics"=>$statistics]);
+    }
+
+
+
+
+
+
+
+
+
     public function show(UserRepository $userRepo, $id){
 
         $doctor= $userRepo -> find($id);
