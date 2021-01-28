@@ -16,6 +16,7 @@
     <button type="submit"><i class="fa fa-search"></i></button>
   </form>
 {{-- Search Engine --}}
+<a href="{{ URL::to('specializations/create') }}">Dodawanie nowej specializacji</a>
     <table class="table">
             <thead>
                 <tr>

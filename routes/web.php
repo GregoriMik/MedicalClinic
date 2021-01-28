@@ -29,6 +29,11 @@ Route::get('patients/', 'PatientController@index');
 
 Route::get('patients/{id}', 'PatientController@show');
 
+
 Route::get('specializations/', 'SpecializationController@index');
+
+Route::get('specializations/create', 'SpecializationController@create');
+
+Route::post('specializations/', 'SpecializationController@store');
 
 Route::get('visits/', 'VisitController@index');
