@@ -8,6 +8,13 @@
 
 @section('content')
     
+{{-- Search Engine --}}
+<form class="example" action="#">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+{{-- Search Engine --}}
+<a href="{{ URL::to('doctors/create') }}">Dodawanie nowego lekarza</a>
 
     <table class="table">
         <h3><b>Lekarze</b></h3></br></br>

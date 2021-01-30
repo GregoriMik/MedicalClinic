@@ -11,12 +11,13 @@
 <div class="container">
 <h3><b>Specializacje</b></h3></br></br>
 {{-- Search Engine --}}
-<form class="example" action="/action_page.php">
+<form class="example" action="#">
     <input type="text" placeholder="Search.." name="search">
     <button type="submit"><i class="fa fa-search"></i></button>
   </form>
 {{-- Search Engine --}}
 <a href="{{ URL::to('specializations/create') }}">Dodawanie nowej specializacji</a>
+
     <table class="table">
             <thead>
                 <tr>

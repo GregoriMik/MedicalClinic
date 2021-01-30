@@ -19,6 +19,8 @@ Route::get('doctors/edit/{id}', 'DoctorController@edit');
 
 Route::get('doctors/create', 'DoctorController@create');
 
+Route::post('doctors/', 'DoctorController@store');
+
 Route::get('doctors/', 'DoctorController@index');
 
 Route::get('doctors/specializations/{id}', 'DoctorController@listBySpecialization');
