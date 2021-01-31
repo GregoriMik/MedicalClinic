@@ -27,6 +27,7 @@
                     <th scope="col">Specializacje</th>
                     <th scope="col">Adres przychodni</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Operacje</th>
                 </tr>
             </thead>
                         
@@ -48,6 +49,7 @@
                             </td>
                             <td>{{ $doctor->address }}</td>
                             <td>{{ $doctor->status }}</td>
+                            <td><a href="{{ URL::to('doctors/delete/' . $doctor->id) }}" onclick="return confirm('Czy na pewno usunąć?')">Usuń lekarza</a></td>
                         </tr>
                       
                 @endforeach

@@ -25,6 +25,8 @@ Route::get('doctors/', 'DoctorController@index');
 
 Route::get('doctors/specializations/{id}', 'DoctorController@listBySpecialization');
 
+Route::get('doctors/delete/{id}', 'DoctorController@delete');
+
 Route::get('doctors/{id}', 'DoctorController@show');
 
 Route::get('patients/', 'PatientController@index');

@@ -8,6 +8,8 @@ use App\Models\User;
 
 use App\Models\Specialization;
 
+use App\Models\Visit;
+
 use App\Repositories\UserRepository;
 class DoctorController extends Controller
 {
@@ -76,6 +78,16 @@ class DoctorController extends Controller
     public function edit(UserRepository $userRepo, $id){
         
         $doctor= $userRepo -> update(["name" => "Johnson Allan"], $id);
+
+        return redirect('doctors');
+    }
+
+    public function delete(UserRepository $userRepo, $id){
+
+        $visit = $userRepo ->delete($id);
+        
+        
+        $doctor= $userRepo -> delete($id);
 
         return redirect('doctors');
     }
