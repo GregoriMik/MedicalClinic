@@ -39,3 +39,7 @@ Route::get('specializations/create', 'SpecializationController@create');
 Route::post('specializations/', 'SpecializationController@store');
 
 Route::get('visits/', 'VisitController@index');
+
+Route::get('visits/create', 'VisitController@create');
+
+Route::post('visits/', 'VisitController@store');

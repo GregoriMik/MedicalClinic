@@ -16,6 +16,9 @@
     <button type="submit"><i class="fa fa-search"></i></button>
   </form>
 {{-- Search Engine --}}
+
+<a href="{{ URL::to('visits/create') }}">Dodawanie nowej wizyty</a>
+
     <table class="table">
             <thead>
                 <tr>
