@@ -77,9 +77,31 @@ class DoctorController extends Controller
     }
     public function edit(UserRepository $userRepo, $id){
         
-        $doctor= $userRepo -> update(["name" => "Johnson Allan"], $id);
+        // $doctor= $userRepo -> update(["name" => "Johnson Allan"], $id); //Static edit doctor
+        $doctor= $userRepo -> find($id);
 
-        return redirect('doctors');
+        $specializations = Specialization::all();
+
+        return view ('doctors.edit',["specializations"=>$specializations,
+                                     "doctor" => $doctor,
+                                     "footerYear"=>date("Y")]);
+    }
+    public function editStore(Request $request){
+
+        $doctor = User::find($request->input('id'));
+        $doctor->name = $request->input('name');
+        $doctor->email = $request->input('email');
+        $doctor->phone = $request->input('phone');
+        $doctor->address = $request->input('address');
+        $doctor->pesel = $request->input('pesel');
+        $doctor->status = $request->input('status');
+        // $doctor->images = $request->input('images');
+        $doctor->save();
+
+        $doctor->specializations()->sync($request->input('specializations'));
+
+
+        return redirect()->action('DoctorController@index');
     }
 
     public function delete(UserRepository $userRepo, $id){

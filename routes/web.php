@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('doctors/edit/{id}', 'DoctorController@edit');
 
+Route::post('doctors/edit/', 'DoctorController@editStore');
+
 Route::get('doctors/create', 'DoctorController@create');
 
 Route::post('doctors/', 'DoctorController@store');

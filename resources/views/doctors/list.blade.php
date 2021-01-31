@@ -50,6 +50,7 @@
                             <td>{{ $doctor->address }}</td>
                             <td>{{ $doctor->status }}</td>
                             <td><a href="{{ URL::to('doctors/delete/' . $doctor->id) }}" onclick="return confirm('Czy na pewno usunąć?')">Usuń lekarza</a></td>
+                            <td><a href="{{ URL::to('doctors/edit/' . $doctor->id) }}" onclick="return confirm('Czy na pewno edytować?')">Edycja Lekarza</a></td>
                         </tr>
                       
                 @endforeach
