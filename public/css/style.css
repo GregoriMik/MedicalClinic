@@ -1,6 +1,4 @@
-*{
-  box-sizing: border-box;
-}
+
 .container{
     min-height: 200%;
 }
@@ -8,3 +6,24 @@ footer{
     background-color: #aaa;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body{
+  background-image: url(../images/back.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

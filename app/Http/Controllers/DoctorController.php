@@ -58,6 +58,15 @@ class DoctorController extends Controller
     }
     public function store(Request $request){
 
+        $request->validate([
+            'name'=>'required|max:255',
+            'email'=>'required|email|unique:users,email',
+            'password'=>'required|min:5',
+            'phone'=>'required',
+            'address'=>'required',
+            'pesel'=>'required'
+        ]);
+
         $doctor = new User;
         $doctor->name = $request->input('name');
         $doctor->email = $request->input('email');
