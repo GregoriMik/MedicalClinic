@@ -47,3 +47,7 @@ Route::get('visits/', 'VisitController@index');
 Route::get('visits/create', 'VisitController@create');
 
 Route::post('visits/', 'VisitController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
