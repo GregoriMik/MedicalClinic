@@ -1,5 +1,13 @@
-*{
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+
+}
+body{
+  background-image: url(../images/back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .container{
     min-height: 200%;
@@ -7,4 +15,8 @@
 footer{
     background-color: #aaa;
 }
-
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
