@@ -8,7 +8,7 @@
 
             </br></br>
 
-                <div class="panel-heading">Login</div>
+                <div class="panel-heading"></div>
 
 
                 <div class="panel-body">
@@ -26,7 +26,7 @@
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
-                            </div>
+                            </div></br>
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
@@ -40,7 +40,7 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
-                            </div>
+                            </div></br>
                         </div>
 
                         <div class="form-group">
@@ -49,18 +49,17 @@
                                     <label>
                                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Zapamiętaj mnie
                                     </label>
-                                </div>
+                                </div></br>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-<<<<<<< HEAD
+
+
                                     Zaloguj
-=======
-                                    Login
->>>>>>> 193e2dd51ae18a60338241b2ea77fbf3e1124cfe
+
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">

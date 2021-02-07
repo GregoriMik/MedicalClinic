@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 * {
   margin: 0;
   padding: 0;
@@ -11,17 +11,17 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
 }
-=======
 
->>>>>>> 193e2dd51ae18a60338241b2ea77fbf3e1124cfe
+
+
 .container{
     min-height: 200%;
 }
 footer{
     background-color: #aaa;
 }
-<<<<<<< HEAD
-=======
+
+
 
 * {
   margin: 0;
@@ -34,20 +34,22 @@ html {
   scroll-behavior: smooth;
 }
 
->>>>>>> 193e2dd51ae18a60338241b2ea77fbf3e1124cfe
+
 .clearfix::after {
   content: "";
   display: block;
   clear: both;
 }
-<<<<<<< HEAD
+
 .brandingLogin{
   line-height: 48px;
   font-size: 24px;
-=======
+  list-style-type: none;
+}
 body{
   background-image: url(../images/back.png);
   background-size: cover;
   background-repeat: no-repeat;
->>>>>>> 193e2dd51ae18a60338241b2ea77fbf3e1124cfe
+  list-style-type: none;
+
 }

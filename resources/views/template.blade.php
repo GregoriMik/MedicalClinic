@@ -37,15 +37,15 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{ URL::to('patients/') }}">Pacjenci</a>
                 </li>
-<<<<<<< HEAD
-                <li class="nav-item">
+
+                <li class="nav-item ">
                   <a class="nav-link" href="{{ URL::to('home/') }}">Panel Logowania @if (isset($name))
                     {{ Auth::user()->name }}
                   @endif</a>
                 </li>
               </ul>
               
-=======
+
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
@@ -68,7 +68,7 @@
                     </li>
                 @endguest
             </ul>
->>>>>>> 193e2dd51ae18a60338241b2ea77fbf3e1124cfe
+
               
 
 @yield('content')
@@ -76,16 +76,10 @@
 
     </div>
     <footer class="text-center">
-<<<<<<< HEAD
-      @if (isset($footerYear))
-      {{ $footerYear }}
-      @endif
-        
-=======
        @if (@isset($footerYear))
        {{ $footerYear }}
        @endif
->>>>>>> 193e2dd51ae18a60338241b2ea77fbf3e1124cfe
+
     </footer>
     <style>
       body {
