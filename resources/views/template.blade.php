@@ -15,6 +15,16 @@
     <div class="container">
         <div>
             <ul class="nav justify-content-center">
+                
+              </ul>
+              
+              <ul class="nav navbar-nav navbar-right">
+                <!-- Authentication Links -->
+                @guest
+                    <li class=""><a class="nav-link" href="{{ route('login') }}">Logowanie</a></li>
+                    <li class=""><a class="nav-link" href="{{ route('register') }}">Rejestracja</a><br></li>
+                @else
+
                 <li class="nav-item">
                   <a class="nav-link" href="{{ URL::to('doctors/') }}">Lekarze</a>
                 </li>
@@ -27,6 +37,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{ URL::to('patients/') }}">Pacjenci</a>
                 </li>
+<<<<<<< HEAD
                 <li class="nav-item">
                   <a class="nav-link" href="{{ URL::to('home/') }}">Panel Logowania @if (isset($name))
                     {{ Auth::user()->name }}
@@ -34,6 +45,30 @@
                 </li>
               </ul>
               
+=======
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @endguest
+            </ul>
+>>>>>>> 193e2dd51ae18a60338241b2ea77fbf3e1124cfe
               
 
 @yield('content')
@@ -41,10 +76,16 @@
 
     </div>
     <footer class="text-center">
+<<<<<<< HEAD
       @if (isset($footerYear))
       {{ $footerYear }}
       @endif
         
+=======
+       @if (@isset($footerYear))
+       {{ $footerYear }}
+       @endif
+>>>>>>> 193e2dd51ae18a60338241b2ea77fbf3e1124cfe
     </footer>
     <style>
       body {

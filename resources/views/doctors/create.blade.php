@@ -9,6 +9,16 @@
 @section('content')
     
 <div class="container">
+    @if ($errors->any())
+    <div>
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+        
+    @endif
 <h4><b>Dodawanie nowego lekarza</b></h4></br></br>
 
     <form action="{{ action('DoctorController@store')}}"role="form" method="POST">
