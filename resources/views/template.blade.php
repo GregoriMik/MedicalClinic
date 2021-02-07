@@ -27,6 +27,11 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{ URL::to('patients/') }}">Pacjenci</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ URL::to('home/') }}">Panel Logowania @if (isset($name))
+                    {{ Auth::user()->name }}
+                  @endif</a>
+                </li>
               </ul>
               
               
@@ -36,7 +41,10 @@
 
     </div>
     <footer class="text-center">
-        {{ $footerYear }}
+      @if (isset($footerYear))
+      {{ $footerYear }}
+      @endif
+        
     </footer>
     <style>
       body {

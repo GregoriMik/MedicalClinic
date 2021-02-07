@@ -19,6 +19,9 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                background-image: url(../images/back.png);
+                background-size: cover;
+                background-repeat: no-repeat;
             }
 
             .full-height {
@@ -66,29 +69,26 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            <h2>Witamy w systemie przychodni lekarskiej!</h2>
+            <style>
+            
+            
+            </style>
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ route('login') }}">Logowanie</a>
+                        <a href="{{ route('register') }}">Rejestracja</a>
                     @endauth
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                
             </div>
         </div>
     </body>

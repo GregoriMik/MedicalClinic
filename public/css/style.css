@@ -5,6 +5,7 @@
 
 }
 body{
+
   background-image: url(../images/back.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,4 +20,8 @@ footer{
   content: "";
   display: block;
   clear: both;
+}
+.brandingLogin{
+  line-height: 48px;
+  font-size: 24px;
 }
