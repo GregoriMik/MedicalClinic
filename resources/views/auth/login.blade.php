@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-<<<<<<< HEAD
+
             </br></br>
-=======
+
                 <div class="panel-heading">Login</div>
->>>>>>> 193e2dd51ae18a60338241b2ea77fbf3e1124cfe
+
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
