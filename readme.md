@@ -1,3 +1,51 @@
+
+Prosty system oparty o CRUD do obsługi przychodni lekarskiej. 
+
+System posiada cztery kategorie (Lekarze, Specializacje, Wizyty, Pacjenci)
+
+Można się zalogować do systemu jako jan@kowalewski.pl hasło (12345)
+
+Zabezpieczenie żadań z paska adresowego jest zakomentowane, aby można było swobodnie poruszać się po systemie.
+
+Aby zobaczyć projekt należy stworzyć bazę danych o nazwie system. Konieczny jest Composer. 
+
+Następnie będąc w katalogu z projektem używamy poleceń:
+a) php artisan migrate 
+b) php artisan db:seed --class=UsersTableSeeder
+
+Ścieżki podstawowe:
+- http://localhost/DoctorClinic/public/doctors
+- http://localhost/DoctorClinic/public/visits
+- http://localhost/DoctorClinic/public/specializations
+- http://localhost/DoctorClinic/public/specializations
+
+A simple CRUD-based system for operating a medical clinic.
+
+The system has four categories (Doctors, Specializations, Visits, Patients)
+
+You can log in to the system as jan@kowalewski.pl password (12345)
+
+The security of requests from the address bar is commented out so that you can move freely around the system.
+
+To view the project, create a database named system. Composer is required.
+
+Then, being in the project directory, use the commands:
+a) php artisan migrate
+b) php artisan db: seed --class = UsersTableSeeder
+
+Paths basic:
+
+- http://localhost/DoctorClinic/public/doctors
+- http://localhost/DoctorClinic/public/visits
+- http://localhost/DoctorClinic/public/specializations
+- http://localhost/DoctorClinic/public/specializations
+
+
+
+
+
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
